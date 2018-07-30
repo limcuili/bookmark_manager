@@ -1,0 +1,3 @@
+<% @bookmark.all.each do |hash| %>
+  <a href="<%= hash[:url] %>"><%= hash[:title] %></a></br>
+<% end %>
