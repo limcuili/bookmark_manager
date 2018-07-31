@@ -1,3 +1,7 @@
+<ul>
 <% @bookmarks.each do |hash| %>
-  <a href="<%= hash[:url] %>"><%= hash[:title] %></a></br>
+  <li>
+    <a href="<%= hash[:url] %>"><%= hash[:title] %></a>
+  </li>
 <% end %>
+</ul>

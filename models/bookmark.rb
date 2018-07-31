@@ -3,7 +3,11 @@ require 'pg'
 class Bookmark
 
   def self.all
-    connection = PG.connect :dbname => 'bookmark_manager', :user => 'marek'
+    if ENV['RACK_ENV'] == 'development'
+      connection = PG.connect(dbname: 'bookmark_manager')
+    elsif ENV['RACK_ENV'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    end
     result = connection.exec "TABLE bookmarks"
     result.map { |bookmark| { :url => bookmark['url'], :title => bookmark['title'] } }
   end
