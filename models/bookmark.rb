@@ -1,19 +1,11 @@
+require 'pg'
+
 class Bookmark
 
-  BOOKMARKS =
-  [
-    {
-      :title => "Google",
-      :url => 'https://www.google.co.uk/'
-    },
-    {
-      :title => "Makers' course outline",
-      :url => 'https://github.com/makersacademy/course/blob/master/week_outlines.md'
-    }
-  ]
-
-  def all
-    BOOKMARKS
+  def self.all
+    connection = PG.connect :dbname => 'bookmark_manager', :user => 'marek'
+    result = connection.exec "TABLE bookmarks"
+    result.map { |bookmark| { :url => bookmark['url'], :title => bookmark['title'] } }
   end
 
 end

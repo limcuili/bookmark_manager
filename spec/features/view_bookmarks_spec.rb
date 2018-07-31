@@ -3,7 +3,8 @@ feature "User can view bookmarks" do
     visit '/'
     click_button "Bookmarks"
     click_button "View all"
-    expect(page).to have_link("Google", :href => "https://www.google.co.uk/")
-    expect(page).to have_link("Makers' course outline", :href => "https://github.com/makersacademy/course/blob/master/week_outlines.md")
+    expect(page).to have_link("Makers Homepage", :href => "http://makersacademy.com")
+    expect(page).to have_link("Google", :href => "http://google.com")
+    expect(page).to have_link("Destroy all Software", :href => "http://destroyallsoftware.com")
   end
 end
