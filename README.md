@@ -4,7 +4,7 @@ This is Week 4 of Makers
 
 The website will have the following specification:
 
-Show a list of bookmarks  
+Show a list of bookmarks :heavy_check_mark:  
 Add new bookmarks  
 Delete bookmarks  
 Update bookmarks  
@@ -24,4 +24,4 @@ So that I can visit them again
 | Object    | Messages       |
 | :-------: | :------------: |
 | User      |                |
-| Bookmark  | view_all       |
+| Bookmark  | all            |
