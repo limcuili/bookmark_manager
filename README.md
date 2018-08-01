@@ -5,7 +5,7 @@ This is Week 4 of Makers
 The website will have the following specification:
 
 Show a list of bookmarks :heavy_check_mark:  
-Add new bookmarks  
+Add new bookmarks :heavy_check_mark:  
 Delete bookmarks  
 Update bookmarks  
 Comment on bookmarks  
