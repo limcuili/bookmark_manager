@@ -19,9 +19,16 @@ Users manage their bookmarks
 As a user of the web
 I want to be able to see a list of bookmarks that I have saved
 So that I can visit them again
+
+As a user of the web
+I would like to add the site's address and title to bookmark manager
+So that I can save a website
 ```
+
+
 
 | Object    | Messages       |
 | :-------: | :------------: |
 | User      |                |
 | Bookmark  | all            |
+|           | add            |
