@@ -15,4 +15,11 @@ describe Bookmark do
     end
   end
 
+  describe ".add" do
+    it "Adds a bookmark to our database" do
+      Bookmark.add('YouTube', 'https://www.youtube.com/')
+      expect(Bookmark.all).to eq [{ :title => 'YouTube', :url => 'https://www.youtube.com/' }]
+    end
+  end
+
 end

@@ -7,8 +7,13 @@ get '/' do
   erb :index
 end
 
-get '/filter' do
-  erb :filter
+post '/manager' do
+  Bookmark.add(params[:title],params[:url])
+  redirect ('/manager')
+end
+
+get '/manager' do
+  erb :manager
 end
 
 get '/bookmarks' do
