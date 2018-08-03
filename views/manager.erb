@@ -3,6 +3,7 @@
   <button type="submit">Search</button>
 </form>
 
+<%= flash[:notice] %>
 <form action='/manager' method="post">
   <label for="title">Title: </label>
   <input type="text" name="title"></input>
